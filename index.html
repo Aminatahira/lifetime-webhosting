@@ -3,12 +3,1110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello world project</title>
+    <title>
+      ARZ Host - Lifetime Web Hosting | One-Time Payment, Forever Hosting
+    </title>
+    <meta
+      name="description"
+      content="Professional lifetime web hosting with one-time payment. No renewals, no extra bills ever. Host unlimited websites, free SSL, email hosting and more."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-color: #8b4513;
+        --secondary-color: #000000;
+        --background: #ffffff;
+        --foreground: #000000;
+        --muted: #737373;
+        --border: #ece6df;
+        --success: #22c55e;
+      }
+
+      body {
+        font-family:
+          ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        line-height: 1.6;
+        color: var(--foreground);
+        background-color: var(--background);
+      }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+
+      /* Header Styles */
+      header {
+        background: white;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+
+      .nav a {
+        color: var(--foreground);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .nav a:hover {
+        color: var(--primary-color);
+      }
+
+      .nav .primary-link {
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 16px;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+      }
+
+      .btn-primary {
+        background-color: var(--primary-color);
+        color: white;
+        height: 40px;
+        padding: 0 16px;
+      }
+
+      .btn-primary:hover {
+        background-color: #6d3410;
+      }
+
+      .btn-secondary {
+        background-color: white;
+        color: var(--primary-color);
+        border: 1px solid var(--border);
+        height: 44px;
+        padding: 0 32px;
+      }
+
+      .btn-lg {
+        height: 44px;
+        padding: 0 32px;
+      }
+
+      /* Mobile Menu */
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        padding: 8px;
+      }
+
+      @media (max-width: 768px) {
+        .nav {
+          display: none;
+        }
+
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .btn-primary {
+          display: none;
+        }
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(
+          to bottom right,
+          rgba(139, 69, 19, 0.1),
+          rgba(139, 69, 19, 0.05)
+        );
+        padding: 80px 0;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 60px;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 24px;
+        line-height: 1;
+      }
+
+      .hero h2 {
+        font-size: 24px;
+        color: var(--muted);
+        margin-bottom: 32px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 32px;
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 36px;
+        }
+
+        .hero h2 {
+          font-size: 20px;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      /* Section Styles */
+      .section {
+        padding: 80px 0;
+      }
+
+      .section-alt {
+        background-color: rgba(242, 239, 235, 0.3);
+      }
+
+      .section h2 {
+        font-size: 36px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .section h3 {
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      /* Cards Grid */
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 32px;
+      }
+
+      .card {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 24px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      .card h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .card p {
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      /* Pricing Cards */
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 32px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .pricing-card {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 32px 24px;
+        text-align: center;
+        position: relative;
+      }
+
+      .pricing-card.featured {
+        border-color: var(--primary-color);
+      }
+
+      .pricing-badge {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--primary-color);
+        color: white;
+        padding: 4px 16px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      .price {
+        font-size: 36px;
+        font-weight: 700;
+        margin: 16px 0;
+      }
+
+      .price-subtitle {
+        color: var(--muted);
+        margin-bottom: 24px;
+      }
+
+      .features-list {
+        list-style: none;
+        margin: 24px 0;
+        text-align: left;
+      }
+
+      .features-list li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .check-icon {
+        color: var(--success);
+        font-weight: bold;
+      }
+
+      /* FAQ Styles */
+      .faq-container {
+        max-width: 768px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        margin-bottom: 8px;
+        overflow: hidden;
+      }
+
+      .faq-question {
+        width: 100%;
+        background: white;
+        border: none;
+        padding: 20px;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .faq-question:hover {
+        background-color: #f9f9f9;
+      }
+
+      .faq-answer {
+        padding: 0 20px 20px;
+        color: var(--muted);
+        line-height: 1.6;
+        display: none;
+      }
+
+      .faq-answer.active {
+        display: block;
+      }
+
+      /* CTA Section */
+      .cta-section {
+        background-color: var(--primary-color);
+        color: white;
+        text-align: center;
+      }
+
+      .cta-section h2 {
+        color: white;
+      }
+
+      .cta-section p {
+        font-size: 20px;
+        margin: 32px auto;
+        max-width: 768px;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 48px 0;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 32px;
+        margin-bottom: 32px;
+      }
+
+      .footer-section h3 {
+        font-size: 20px;
+        margin-bottom: 16px;
+        text-align: left;
+      }
+
+      .footer-section h4 {
+        font-size: 18px;
+        margin-bottom: 16px;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 8px;
+      }
+
+      .footer-links a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: white;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #333;
+        padding-top: 32px;
+        text-align: center;
+        color: #ccc;
+      }
+
+      /* Utilities */
+      .text-center {
+        text-align: center;
+      }
+
+      .mb-4 {
+        margin-bottom: 16px;
+      }
+
+      .mb-8 {
+        margin-bottom: 32px;
+      }
+
+      .badge {
+        background-color: #f0f0f0;
+        color: var(--foreground);
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 16px;
+        display: inline-block;
+      }
+
+      .guarantee-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin-top: 32px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .guarantee-item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      @media (max-width: 768px) {
+        .section {
+          padding: 40px 0;
+        }
+
+        .section h2 {
+          font-size: 28px;
+        }
+
+        .cards-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .pricing-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+      }
+    </style>
   </head>
-
   <body>
-    <div id="root"></div>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <a href="#" class="logo">ARZ Host</a>
 
-    <script type="module" src="/client/App.tsx"></script>
+          <nav class="nav">
+            <a
+              href="https://arzhost.com/about-us/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >About Us</a
+            >
+            <a
+              href="https://arzhost.com/contact-us/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Contact Us</a
+            >
+            <a
+              href="https://arzhost.com/terms-conditions/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Terms & Conditions</a
+            >
+            <a
+              href="https://arzhost.com/privacy-policy/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Privacy Policy</a
+            >
+            <a
+              href="https://arzhost.com/disclaimer/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Disclaimer</a
+            >
+            <a
+              href="https://arzhost.com/lifetime-web-hosting/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="primary-link"
+              >Life Time Web Hosting</a
+            >
+          </nav>
+
+          <a
+            href="https://arzhost.com/lifetime-web-hosting/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+            >Get Started</a
+          >
+
+          <button class="mobile-menu-btn">
+            <svg
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>
+          <a
+            href="https://arzhost.com/lifetime-web-hosting/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="color: inherit; text-decoration: none"
+            >Lifetime Web Hosting</a
+          >
+        </h1>
+        <h2>One-Time Payment. Unlimited Hosting. Forever.</h2>
+        <p>
+          Tired of paying hosting fees every month or year? Now, host your
+          website for life with our one-time payment web hosting plans. Whether
+          you're launching a blog, business, agency, or portfolio site, our
+          lifetime web hosting solution gives you everything you need without
+          recurring costs.
+        </p>
+        <div class="hero-buttons">
+          <a
+            href="https://arzhost.com/lifetime-web-hosting/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary btn-lg"
+            >Choose Your Lifetime Hosting Plan</a
+          >
+          <a
+            href="https://arzhost.com/lifetime-web-hosting/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary"
+            >Get Instant Setup</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="section">
+      <div class="container">
+        <h2>Why Choose Lifetime Web Hosting?</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <h3><span>💰</span> One-Time Payment</h3>
+            <p>
+              Pay once, and you're set for life. No renewals, no extra bills —
+              ever.
+            </p>
+          </div>
+          <div class="card">
+            <h3><span>🌐</span> Host Unlimited Websites</h3>
+            <p>
+              Choose a plan that lets you host 1, 5, or even unlimited websites
+              with zero restrictions on bandwidth or traffic.
+            </p>
+          </div>
+          <div class="card">
+            <h3><span>🆓</span> Free Website Hosting for Life</h3>
+            <p>
+              Get started with free hosting for personal or simple websites —
+              reliable, secure, and completely cost-free.
+            </p>
+          </div>
+          <div class="card">
+            <h3><span>📧</span> Lifetime Email Hosting</h3>
+            <p>
+              Create and manage professional email accounts linked to your
+              domain, included in all paid plans.
+            </p>
+          </div>
+          <div class="card">
+            <h3><span>🔒</span> Free SSL & Backups</h3>
+            <p>
+              Keep your data secure with free lifetime SSL certificates and
+              automated weekly backups always included.
+            </p>
+          </div>
+          <div class="card">
+            <h3><span>🚀</span> Performance & Reliability</h3>
+            <p>
+              Built for performance, stability, and simplicity with professional
+              support when you need it.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Transparent Lifetime Hosting Plans</h2>
+        <p class="text-center mb-8" style="color: var(--muted)">
+          Choose the plan that fits your goals. Simple, secure, and no renewal
+          fees ever.
+        </p>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Starter Life Host</h3>
+            <div class="price">$69.99</div>
+            <p class="price-subtitle">One-Time Payment</p>
+            <div class="badge">Host 1 Website</div>
+            <ul class="features-list">
+              <li><span class="check-icon">✓</span> Lifetime Email</li>
+              <li><span class="check-icon">✓</span> Free SSL Certificate</li>
+              <li><span class="check-icon">✓</span> Weekly Backups</li>
+              <li><span class="check-icon">✓</span> cPanel Access</li>
+            </ul>
+            <a
+              href="https://arzhost.com/lifetime-web-hosting/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              style="width: 100%; margin-top: 16px"
+              >Choose Plan</a
+            >
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="pricing-badge">Most Popular</div>
+            <h3>Advanced Lifetime</h3>
+            <div class="price">$98.99</div>
+            <p class="price-subtitle">One-Time Payment</p>
+            <div class="badge">Host up to 5 Websites</div>
+            <ul class="features-list">
+              <li><span class="check-icon">✓</span> Free Domain</li>
+              <li>
+                <span class="check-icon">✓</span> Unlimited Email & Storage
+              </li>
+              <li><span class="check-icon">✓</span> Free SSL Certificate</li>
+              <li><span class="check-icon">✓</span> Weekly Backups</li>
+              <li><span class="check-icon">✓</span> cPanel Access</li>
+            </ul>
+            <a
+              href="https://arzhost.com/lifetime-web-hosting/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              style="width: 100%; margin-top: 16px"
+              >Choose Plan</a
+            >
+          </div>
+
+          <div class="pricing-card">
+            <h3>Unlimited Pro</h3>
+            <div class="price">$148.99</div>
+            <p class="price-subtitle">One-Time Payment</p>
+            <div class="badge">Unlimited Websites</div>
+            <ul class="features-list">
+              <li><span class="check-icon">✓</span> Unlimited Domains</li>
+              <li>
+                <span class="check-icon">✓</span> Unlimited Email Accounts
+              </li>
+              <li><span class="check-icon">✓</span> Unlimited Bandwidth</li>
+              <li><span class="check-icon">✓</span> Priority Support</li>
+              <li><span class="check-icon">✓</span> All Advanced Features</li>
+            </ul>
+            <a
+              href="https://arzhost.com/lifetime-web-hosting/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              style="width: 100%; margin-top: 16px"
+              >Choose Plan</a
+            >
+          </div>
+        </div>
+
+        <div class="guarantee-list">
+          <div class="guarantee-item">
+            <span class="check-icon">✓</span> 100% lifetime access
+          </div>
+          <div class="guarantee-item">
+            <span class="check-icon">✓</span> No hidden charges
+          </div>
+          <div class="guarantee-item">
+            <span class="check-icon">✓</span> Free migration
+          </div>
+          <div class="guarantee-item">
+            <span class="check-icon">✓</span> 24/7 support
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Free & Paid Options -->
+    <section class="section">
+      <div class="container">
+        <h2>Free & Paid Lifetime Hosting Options</h2>
+        <p
+          class="text-center"
+          style="font-size: 18px; max-width: 800px; margin: 0 auto"
+        >
+          Looking for free unlimited web hosting lifetime solutions? We've got
+          you covered. Start with a basic free account — perfect for students,
+          hobbyists, or landing pages and upgrade anytime as your needs grow.
+          Or, go pro with a
+          <a
+            href="https://arzhost.com/lifetime-web-hosting/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="color: var(--primary-color)"
+            >web hosting lifetime deal</a
+          >
+          that unlocks unlimited potential, full control, and scalable growth.
+        </p>
+      </div>
+    </section>
+
+    <!-- Who Is This For -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Who Is This For?</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <h3>Bloggers & Creators</h3>
+            <p>Launch once and forget about hosting fees forever.</p>
+          </div>
+          <div class="card">
+            <h3>Freelancers & Developers</h3>
+            <p>Manage client websites with one-time investment.</p>
+          </div>
+          <div class="card">
+            <h3>Startups & SMBs</h3>
+            <p>Eliminate monthly hosting costs while scaling up.</p>
+          </div>
+          <div class="card">
+            <h3>Educational & Nonprofit Projects</h3>
+            <p>Host long-term initiatives securely and affordably.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Lifetime Hosting -->
+    <section class="section">
+      <div class="container">
+        <h2>Why Lifetime Hosting Is a Smarter Choice</h2>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            max-width: 800px;
+            margin: 0 auto;
+          "
+        >
+          <div>
+            <div style="margin-bottom: 16px">
+              <span class="check-icon">✓</span> No renewal stress or expiring
+              plans
+            </div>
+            <div style="margin-bottom: 16px">
+              <span class="check-icon">✓</span> Unlimited growth potential with
+              scalable plans
+            </div>
+            <div style="margin-bottom: 16px">
+              <span class="check-icon">✓</span> Peace of mind with lifetime
+              access
+            </div>
+          </div>
+          <div>
+            <div style="margin-bottom: 16px">
+              <span class="check-icon">✓</span> Budget-friendly and future-ready
+            </div>
+            <div style="margin-bottom: 16px">
+              <span class="check-icon">✓</span> Built for performance,
+              stability, and simplicity
+            </div>
+            <div style="margin-bottom: 16px">
+              <span class="check-icon">✓</span> Professional support from
+              <a
+                href="https://arzhost.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="color: var(--primary-color)"
+                >ARZ Host</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Is lifetime hosting really for life?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Yes! You make a one-time payment and get permanent access to your
+              hosting plan. This is a genuine lifetime commitment from
+              <a
+                href="https://arzhost.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="color: var(--primary-color)"
+                >our hosting services</a
+              >.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Can I really host unlimited websites?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Absolutely. With the Unlimited Pro plan, you can host as many
+              websites as you like — forever. No restrictions on bandwidth or
+              traffic.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Is there a free lifetime hosting plan?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Yes. Our basic tier allows users to host simple websites with no
+              charge — forever. Perfect for personal projects and getting
+              started.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Does it include email and SSL?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Yes. All paid plans come with lifetime email hosting, free SSL
+              certificates, backups, and more. Everything you need for a
+              professional web presence.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              Can I upgrade if I need more resources?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Yes, you can upgrade anytime without losing your existing content
+              or setup. Our team will help you migrate seamlessly.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+              What about VPS hosting options?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              We also offer
+              <a
+                href="https://arzhost.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="color: var(--primary-color)"
+                >VPS hosting Hong Kong</a
+              >
+              solutions for more advanced hosting needs. Contact us to learn
+              more about our enterprise solutions.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section cta-section">
+      <div class="container">
+        <h2>Ready to Host for Life?</h2>
+        <p>
+          "Don't let monthly bills slow you down. Go live once and stay live
+          forever. With lifetime web hosting, you're investing in long-term
+          peace of mind, reliability, and freedom."
+        </p>
+        <div class="hero-buttons">
+          <a
+            href="https://arzhost.com/lifetime-web-hosting/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary btn-lg"
+            style="background: white; color: var(--primary-color)"
+            >Choose Your Lifetime Hosting Plan</a
+          >
+          <a
+            href="https://arzhost.com/lifetime-web-hosting/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-lg"
+            style="
+              background: transparent;
+              color: white;
+              border: 1px solid white;
+            "
+            >Get Instant Setup</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3>ARZ Host</h3>
+            <p style="color: #ccc; margin-bottom: 16px">
+              Professional lifetime web hosting solutions with one-time payment.
+              No renewals, no extra bills — ever.
+            </p>
+            <div style="font-size: 14px; color: #ccc">
+              <p>
+                Website:
+                <a href="https://arzhost.com" style="color: white"
+                  >arzhost.com</a
+                >
+              </p>
+              <p>Phone: +1 (631) 594-8060</p>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Company</h4>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://arzhost.com/about-us/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://arzhost.com/contact-us/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://arzhost.com/lifetime-web-hosting/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Life Time Web Hosting</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Legal</h4>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://arzhost.com/terms-conditions/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://arzhost.com/privacy-policy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://arzhost.com/disclaimer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Disclaimer</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Hosting Services</h4>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://arzhost.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Our Hosting Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://arzhost.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >VPS Hosting Hong Kong</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 ARZ Host. All rights reserved. Professional lifetime web
+            hosting solutions.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleFaq(button) {
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector("span");
+
+        // Close all other FAQ items
+        document.querySelectorAll(".faq-answer").forEach((item) => {
+          if (item !== answer) {
+            item.classList.remove("active");
+            item.previousElementSibling.querySelector("span").textContent = "+";
+          }
+        });
+
+        // Toggle current FAQ item
+        answer.classList.toggle("active");
+        icon.textContent = answer.classList.contains("active") ? "−" : "+";
+      }
+    </script>
   </body>
 </html>
