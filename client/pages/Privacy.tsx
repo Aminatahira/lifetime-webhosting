@@ -6,7 +6,7 @@ export default function Privacy() {
   useEffect(() => {
     // Redirect to arzhost.com after a brief moment
     const timer = setTimeout(() => {
-      window.location.href = "https://www.arzhost.com/privacy-policy/";
+      window.location.href = "https://arzhost.com/privacy-policy/";
     }, 1000);
 
     return () => clearTimeout(timer);

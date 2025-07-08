@@ -6,7 +6,7 @@ export default function Terms() {
   useEffect(() => {
     // Redirect to arzhost.com after a brief moment
     const timer = setTimeout(() => {
-      window.location.href = "https://www.arzhost.com/terms-conditions/";
+      window.location.href = "https://arzhost.com/terms-conditions/";
     }, 1000);
 
     return () => clearTimeout(timer);

@@ -6,7 +6,7 @@ export default function About() {
   useEffect(() => {
     // Redirect to arzhost.com after a brief moment
     const timer = setTimeout(() => {
-      window.location.href = "https://www.arzhost.com/about-us/";
+      window.location.href = "https://arzhost.com/about-us/";
     }, 1000);
 
     return () => clearTimeout(timer);

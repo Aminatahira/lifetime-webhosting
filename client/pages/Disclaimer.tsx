@@ -6,7 +6,7 @@ export default function Disclaimer() {
   useEffect(() => {
     // Redirect to arzhost.com after a brief moment
     const timer = setTimeout(() => {
-      window.location.href = "https://www.arzhost.com/disclaimer/";
+      window.location.href = "https://arzhost.com/disclaimer/";
     }, 1000);
 
     return () => clearTimeout(timer);

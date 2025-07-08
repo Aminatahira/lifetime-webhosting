@@ -6,7 +6,7 @@ export default function Contact() {
   useEffect(() => {
     // Redirect to arzhost.com after a brief moment
     const timer = setTimeout(() => {
-      window.location.href = "https://www.arzhost.com/contact-us/";
+      window.location.href = "https://arzhost.com/contact-us/";
     }, 1000);
 
     return () => clearTimeout(timer);
