@@ -28,18 +28,22 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <div className="space-y-2">
-              <Link
-                to="/about"
+              <a
+                href="https://arzhost.com/about-us/"
                 className="block text-gray-300 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 About Us
-              </Link>
-              <Link
-                to="/contact"
+              </a>
+              <a
+                href="https://arzhost.com/contact-us/"
                 className="block text-gray-300 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Contact Us
-              </Link>
+              </a>
               <a
                 href="https://arzhost.com/lifetime-web-hosting/"
                 className="block text-gray-300 hover:text-white transition-colors"
@@ -54,24 +58,30 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Legal</h4>
             <div className="space-y-2">
-              <Link
-                to="/terms"
+              <a
+                href="https://arzhost.com/terms-conditions/"
                 className="block text-gray-300 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Terms & Conditions
-              </Link>
-              <Link
-                to="/privacy"
+              </a>
+              <a
+                href="https://arzhost.com/privacy-policy/"
                 className="block text-gray-300 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Privacy Policy
-              </Link>
-              <Link
-                to="/disclaimer"
+              </a>
+              <a
+                href="https://arzhost.com/disclaimer/"
                 className="block text-gray-300 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Disclaimer
-              </Link>
+              </a>
             </div>
           </div>
 

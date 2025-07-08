@@ -11,36 +11,46 @@ export default function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <Link
-              to="/about"
+            <a
+              href="https://arzhost.com/about-us/"
               className="text-foreground hover:text-primary transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               About Us
-            </Link>
-            <Link
-              to="/contact"
+            </a>
+            <a
+              href="https://arzhost.com/contact-us/"
               className="text-foreground hover:text-primary transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Contact Us
-            </Link>
-            <Link
-              to="/terms"
+            </a>
+            <a
+              href="https://arzhost.com/terms-conditions/"
               className="text-foreground hover:text-primary transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Terms & Conditions
-            </Link>
-            <Link
-              to="/privacy"
+            </a>
+            <a
+              href="https://arzhost.com/privacy-policy/"
               className="text-foreground hover:text-primary transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Privacy Policy
-            </Link>
-            <Link
-              to="/disclaimer"
+            </a>
+            <a
+              href="https://arzhost.com/disclaimer/"
               className="text-foreground hover:text-primary transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Disclaimer
-            </Link>
+            </a>
             <a
               href="https://arzhost.com/lifetime-web-hosting/"
               className="text-primary font-medium hover:text-primary/80 transition-colors"
